@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --glass-bg: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(255, 255, 255, 0.15);
+}
+
+body {
+  @apply bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white min-h-screen;
+  background-attachment: fixed;
+}
+
+.glass {
+  @apply backdrop-blur-md bg-gradient-to-br;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+}
+
+.glass-card {
+  @apply glass rounded-xl shadow-xl;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.glass-header {
+  @apply glass sticky top-0 z-50 backdrop-blur-lg;
+  background: rgba(17, 24, 39, 0.8);
+}
